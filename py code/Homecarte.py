@@ -55,14 +55,14 @@ def addProd():
     #Creating the window
     wn = tkinter.Tk() 
     wn.title("Homecarte Management System")
-    wn.configure(bg='#f03e4a')
+    wn.configure(bg='#0f0d0d')
    
    
     wn.minsize(width=500,height=500)
     wn.geometry("700x600")
 
     Canvas1 = Canvas(wn)
-    Canvas1.config(bg='#f03e4a')
+    Canvas1.config(bg='#0f0d0d')
     Canvas1.pack(expand=True,fill=BOTH)
     
     headingFrame1 = Frame(wn,bg='LightBlue1',bd=5)
@@ -95,10 +95,10 @@ def addProd():
     prodPrice.place(relx=0.3,rely=0.6, relwidth=0.62, relheight=0.08)
            
     #Add Button
-    Btn = Button(wn,text="ADD",bg='#cdf74d', fg='black',command=prodtoTable)
+    Btn = Button(wn,text="ADD",bg='#0f0d0d', fg='white',command=prodtoTable)
     Btn.place(relx=0.28,rely=0.85, relwidth=0.18,relheight=0.08)
     
-    Quit= Button(wn,text="Quit",bg='#f03e4a', fg='black',command=wn.destroy)
+    Quit= Button(wn,text="Quit",bg='#0f0d0d', fg='white',command=wn.destroy)
     Quit.place(relx=0.53,rely=0.85, relwidth=0.18,relheight=0.08)
     
     wn.mainloop()
@@ -141,10 +141,10 @@ def delProd():
     wn.geometry("700x600")
 
     Canvas1 = Canvas(wn)
-    Canvas1.config(bg="misty rose")
+    Canvas1.config(bg="#7ecfb4")
     Canvas1.pack(expand=True,fill=BOTH)
     
-    headingFrame1 = Frame(wn,bg="misty rose",bd=5)
+    headingFrame1 = Frame(wn,bg="#7ecfb4",bd=5)
     headingFrame1.place(relx=0.25,rely=0.1,relwidth=0.5,relheight=0.13)
     headingLabel = Label(headingFrame1, text="Delete Product", fg='grey19', font=('Courier',15,'bold'))
     headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
@@ -160,10 +160,10 @@ def delProd():
     prodName.place(relx=0.3,rely=0.5, relwidth=0.62)
     
     #Delete Button
-    Btn = Button(wn,text="DELETE",bg='#d1ccc0', fg='black',command=removeProd)
+    Btn = Button(wn,text="DELETE",bg='#000000', fg='white',command=removeProd)
     Btn.place(relx=0.28,rely=0.9, relwidth=0.18,relheight=0.08)
     
-    Quit = Button(wn,text="Quit",bg='#f7f1e3', fg='black', command=wn.destroy)
+    Quit = Button(wn,text="Quit",bg='#000000', fg='white', command=wn.destroy)
     Quit.place(relx=0.53,rely=0.9, relwidth=0.18,relheight=0.08)
     
     wn.mainloop()
@@ -174,15 +174,15 @@ def viewProds():
     #Creating the window to show the products details
     wn = tkinter.Tk() 
     wn.title("homecarte Management System")
-    wn.configure(bg='mint cream')
+    wn.configure(bg='#8f7ecf')
     wn.minsize(width=500,height=500)
     wn.geometry("700x600")
 
     Canvas1 = Canvas(wn) 
-    Canvas1.config(bg="old lace")
+    Canvas1.config(bg="#8f7ecf")
     Canvas1.pack(expand=True,fill=BOTH)
 
-    headingFrame1 = Frame(wn,bg='old lace',bd=5)
+    headingFrame1 = Frame(wn,bg='#8f7ecf',bd=5)
     headingFrame1.place(relx=0.25,rely=0.1,relwidth=0.5,relheight=0.13)
 
     headingLabel = Label(headingFrame1, text="View Products", fg='black', font = ('Courier',15,'bold'))
@@ -213,7 +213,7 @@ def viewProds():
         print("The exception is:",e)
         messagebox.showinfo("Failed to fetch files from database")
     
-    Quit= Button(wn,text="Quit",bg='#f7f1e3', fg='black', command=wn.destroy)
+    Quit= Button(wn,text="Quit",bg='black', fg='white', command=wn.destroy)
     Quit.place(relx=0.4,rely=0.9, relwidth=0.18,relheight=0.08)
     
     wn.mainloop()
@@ -287,7 +287,7 @@ def bill():
     y+=0.1
     Label(labelFrame,text="\t\t\t\t\t\t\t\t"+str(totalBill) ,fg='black').place(relx=0.07,rely=y)
     
-    Quit = Button(wn,text="Quit",bg='#f7f1e3', fg='black', command=wn.destroy)
+    Quit = Button(wn,text="Quit",bg='black', fg='white', command=wn.destroy)
     Quit.place(relx=0.53,rely=0.9, relwidth=0.18,relheight=0.08)
     
     wn.mainloop()
@@ -297,11 +297,11 @@ def newCust():
     #Creating a window
     wn = tkinter.Tk() 
     wn.title("homecarte Management System")
-    wn.configure(bg='lavender blush2')
+    wn.configure(bg='tan1')
     wn.minsize(width=500,height=500)
     wn.geometry("700x600")
 
-    headingFrame1 = Frame(wn,bg="lavender blush2",bd=5)
+    headingFrame1 = Frame(wn,bg="tan1",bd=5)
     headingFrame1.place(relx=0.2,rely=0.1,relwidth=0.6,relheight=0.16)
     headingLabel = Label(headingFrame1, text="New Customer", fg='grey19', font=('Courier',15,'bold'))
     headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
@@ -360,45 +360,88 @@ def newCust():
     y += 0.1
     
      #Button to generate bill
-    Btn= Button(wn,text="Generate Bill",bg='#d1ccc0', fg='black',command=bill)
+    Btn= Button(wn,text="Generate Bill",bg='black', fg='white',command=bill)
     Btn.place(relx=0.28,rely=0.9, relwidth=0.18,relheight=0.08)
     
-    Quit = Button(wn,text="Quit",bg='#f7f1e3', fg='black', command=wn.destroy)
+    Quit = Button(wn,text="Quit",bg='black', fg='white', command=wn.destroy)
     Quit.place(relx=0.55,rely=0.9, relwidth=0.18,relheight=0.08)
 
     wn.mainloop()
 
 #Creating the mail window
-wn = tkinter.Tk() 
-wn.title("homecarte Management System")
-wn.configure(bg='honeydew2')
-wn.minsize(width=500,height=500)
-wn.geometry("700x600")
+window = Tk()
 
-headingFrame1 = Frame(wn,bg="snow3",bd=5)
-headingFrame1.place(relx=0.2,rely=0.1,relwidth=0.6,relheight=0.16)
-headingLabel = Label(headingFrame1, text="Welcome to  Home \n carte", fg='grey19', font=('Courier',15,'bold'))
-headingLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
+window.geometry("700x600")
+window.configure(bg = "#ffffff")
+canvas = Canvas(
+    window,
+    bg = "#ffffff",
+    height = 600,
+    width = 700,
+    bd = 0,
+    highlightthickness = 0,
+    relief = "ridge")
+canvas.place(x = 0, y = 0)
 
-#Button to add a new product
-btn1 = Button(wn,text="Add a Product",bg='LightBlue1', fg='black', width=20,height=2, command=addProd)
-btn1['font'] = font.Font( size=12)
-btn1.place(x=270,y=175)
+background_img = PhotoImage(file = f"background1.png")
+background = canvas.create_image(
+    336.0, 287.0,
+    image=background_img)
 
-#Button to delete a product
-btn2 = Button(wn,text="Delete a Product",bg='misty rose', fg='black',width=20,height=2,command=delProd)
-btn2['font'] = font.Font( size=12)
-btn2.place(x=270,y=255)
+img0 = PhotoImage(file = f"img00.png")
+b0 = Button(
+    image = img0,
+    borderwidth = 0,
+    highlightthickness = 0,
+    command=addProd,
+    relief = "flat")
 
-#Button to view all products
-btn3 = Button(wn,text="View Products",bg='old lace', fg='black',width=20,height=2,command=viewProds)
-btn3['font'] = font.Font( size=12)
-btn3.place(x=270,y=335)
+b0.place(
+    x = 43, y = 285,
+    width = 226,
+    height = 66)
 
-#Button to add a new sale and generate bill
-btn4 = Button(wn,text="New Customer",bg='lavender blush2', fg='black', width=20,height=2,command = newCust)
-btn4['font'] = font.Font( size=12)
-btn4.place(x=270,y=415)
+img1 = PhotoImage(file = f"img01.png")
+b1 = Button(
+    image = img1,
+    borderwidth = 0,
+    highlightthickness = 0,
+    command = delProd,
+    relief = "flat")
 
 
-wn.mainloop() 
+b1.place(
+    x = 388, y = 295,
+    width = 221,
+    height = 51)
+
+img2 = PhotoImage(file = f"img02.png")
+b2 = Button(
+    image = img2,
+    borderwidth = 0,
+    highlightthickness = 0,
+    command = newCust,
+    relief = "flat")
+
+b2.place(
+    x = 388, y = 384,
+    width = 221,
+    height = 51)
+
+img3 = PhotoImage(file = f"img03.png")
+b3 = Button(
+    image = img3,
+    borderwidth = 0,
+    highlightthickness = 0,
+    command = viewProds,
+    relief = "flat")
+
+b3.place(
+    x = 52, y = 384,
+    width = 217,
+    height = 51)
+
+window.resizable(False, False)
+
+
+window.mainloop() 
