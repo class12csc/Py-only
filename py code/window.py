@@ -8,10 +8,10 @@ def btn_clicked():
 window = Tk()
 
 window.geometry("1000x550")
-window.configure(bg = "#030303")
+window.configure(bg = "#ffffff")
 canvas = Canvas(
     window,
-    bg = "#030303",
+    bg = "#ffffff",
     height = 550,
     width = 1000,
     bd = 0,
@@ -60,8 +60,7 @@ b0 = Button(
     borderwidth = 0,
     highlightthickness = 0,
     command = btn_clicked,
-    relief = "flat"
-    )
+    relief = "flat")
 
 b0.place(
     x = 511, y = 375,
